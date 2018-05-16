@@ -1,0 +1,118 @@
+.dark {
+  ion-content {
+    color: color($colors, light);
+    background-color: color($colors, dark);
+  }
+
+  ion-list .item {
+    color: color($colors, light);
+    background-color: color($colors, dark);
+  }
+
+  ion-card {
+    background: rgb(15, 15, 15);
+  }
+
+  .season-card-content {
+    color: color($colors, light);
+    background-color: color($colors, dark);
+  }
+
+  small {
+    color: darkgray;
+  }
+
+  .title {
+      background-color: color($colors, dark);
+      color: color($colors, light);
+  }
+
+  .item-block .item-inner {
+      border-bottom: 1px solid #363636 !important;
+  }
+
+  .icon-theme {
+    color: darkgray;
+  }
+
+  .button-theme {
+    color: #424242;
+    background-color: color($colors, light);
+  }
+  .button-theme.activated {
+    background-color: color($colors, light);
+  }
+
+  .item-select {
+    background-color: #2b2b2b;
+    color: color($colors, light);
+  }
+  
+  .toolbar-title {
+    color: color($colors, light);
+  }
+  
+  .toolbar-background {
+    background-color: color($colors, dark);
+  }
+
+  .toolbar button {
+    color: color($colors, light);
+  }
+
+  .bar-button-menutoggle {
+    color: color($colors, light);
+  }
+
+  .dark-selected {
+    box-shadow: 0 0 8px 1px rgb(0, 140, 255); 
+  }
+
+  .about-item {
+    background-color: color($colors, dark);
+    color: color($colors, light);
+  }
+
+  .item-detail-title span{
+    color: darkgray;
+  }
+
+  .episode-info-title {
+    color: color($colors, light);
+  }
+
+  // device custom css
+  .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: transparent !important;
+  }
+}
+  
+ion-modal {
+  .dark-theme {
+
+    height: inherit;
+
+    .toolbar-title {
+      color: color($colors, light);
+    }
+    
+    .toolbar-background {
+      background-color: color($colors, dark);
+    }
+
+    .toolbar button {
+      color: color($colors, light);
+    }
+  }
+
+  .modal-alert {
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 51.6%;
+    display: block;
+    position: absolute;
+    box-shadow: 0px 0px 0px 10000px rgba(0, 0, 0, 0.5);
+  }
+
+}

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button class="icon-theme" menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Configurações</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <span class="title" ion-item text-uppercase>
+          Temas
+        </span>
+      </ion-col>
+    </ion-row>
+    <ion-row padding>
+      <ion-col>
+        <button ion-button class="light-selected" color="light" (click)="changeTheme('light')">
+          light
+        </button>
+        <button ion-button class="dark-selected" color="dark" (click)="changeTheme('dark')">
+          dark
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
