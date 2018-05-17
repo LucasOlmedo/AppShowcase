@@ -3,7 +3,11 @@
     <button ion-button class="icon-theme" menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Página inicial</ion-title>
+    <ion-title text-uppercase>
+      <div class="main-title">
+        <strong>Na</strong> Contramão
+      </div>
+    </ion-title>
     <ion-buttons end margin-right>
       <button ion-button class="icon-theme" clear icon-only (click)="settingsPage()">
         <ion-icon name="options"></ion-icon>
@@ -12,5 +16,37 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="card-bg">
+  <ion-card>
+    <button ion-button class="card-bg-btn">
+      <img class="card-bg-img" src="assets/imgs/blog.jpg" alt="">
+      <div class="card-bg-title">
+        blog
+      </div>
+    </button>
+  </ion-card>
+  <ion-card>
+    <button ion-button class="card-bg-btn">
+      <img class="card-bg-img" src="assets/imgs/bible.jpg" alt="">
+      <div class="card-bg-title">
+        bible
+      </div>
+    </button>
+  </ion-card>
+  <ion-card>
+    <button ion-button class="card-bg-btn">
+      <img class="card-bg-img" src="assets/imgs/worship.jpg" alt="">
+      <div class="card-bg-title">
+        worship
+      </div>
+    </button>
+  </ion-card>
+  <ion-card>
+    <button ion-button class="card-bg-btn">
+      <img class="card-bg-img" src="assets/imgs/social.jpg" alt="">
+      <div class="card-bg-title">
+        social
+      </div>
+    </button>
+  </ion-card>
 </ion-content>

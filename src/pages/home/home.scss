@@ -1,3 +1,36 @@
 page-home {
 
+    .main-title {
+        font-weight: 100;
+    }
+
+    .card-bg {
+
+        ion-card {
+            position: relative;
+            text-align: center;
+            background-color: black;
+        }
+
+        .card-bg-btn {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: transparent;
+        }
+    
+        .card-bg-img {
+            opacity: 0.5;
+        }
+    
+        .card-bg-title {
+            top: 36%;
+            width: 100%;
+            color: whitesmoke;
+            font-size: 2em;
+            font-weight: bold;
+            position: absolute;
+        }
+    }
+
 }
