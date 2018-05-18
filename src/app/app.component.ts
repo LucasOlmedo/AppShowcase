@@ -4,7 +4,11 @@ import { Component, ViewChild } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { AboutPage } from '../pages/about/about';
+import { EventsPage } from '../pages/events/events';
 import { SettingsPage } from '../pages/settings/settings';
+import { ArticlesPage } from '../pages/articles/articles';
+
 import { ConfigProvider } from '../providers/config/config';
 
 @Component({
@@ -27,7 +31,10 @@ export class MyApp {
 
     this.pages = [
       { title: 'Página inicial', component: HomePage },
+      { title: 'Artigos', component: ArticlesPage },
+      { title: 'Eventos', component: EventsPage },
       { title: 'Configurações', component: SettingsPage },
+      { title: 'Sobre', component: AboutPage },
     ];
 
   }
