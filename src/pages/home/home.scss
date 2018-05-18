@@ -30,6 +30,19 @@ page-home {
             font-size: 2em;
             font-weight: bold;
             position: absolute;
+
+            .custom-symbol {
+                font-size: 34px;
+            }
+
+            .inner-title {
+                font-size: 20px;
+            }
+
+            .inner-subtitle {
+                font-size: 12px;
+                font-weight: 400;
+            }
         }
     }
 
