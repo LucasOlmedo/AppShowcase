@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ConfigProvider {
 
   private theme: BehaviorSubject<String> = new BehaviorSubject('light');
+  private appLogo: BehaviorSubject<String> = new BehaviorSubject('assets/imgs/logo_full.png');
 
   constructor(
     private storage: Storage
@@ -17,15 +18,34 @@ export class ConfigProvider {
   private initTheme() {
     this.storage.get('theme')
       .then(value => {
-        value != null
-          ? this.theme.next(value)
-          : this.storage.set('theme', 'light');
+        if (value != null) {
+          this.theme.next(value);
+          this.setLogo(value);
+        } else {
+          this.storage.set('theme', 'light');
+          this.setLogo('light');
+        }
       });
   }
 
   public setTheme(val) {
     this.storage.set('theme', val)
-      .then(value => this.theme.next(value));
+      .then(value => {
+          this.theme.next(value);
+          this.setLogo(value);
+      });
+  }
+
+  private setLogo(theme) {
+    if (theme == 'light') {
+      this.appLogo.next('assets/imgs/logo_full.png');
+    } else {
+      this.appLogo.next('assets/imgs/logo_full_white.png');
+    }
+  }
+
+  public getLogo() {
+    return this.appLogo.asObservable();
   }
 
   public getTheme() {

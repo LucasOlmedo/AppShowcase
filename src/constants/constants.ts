@@ -1,0 +1,1 @@
+export const APP_LOGO = 'assets/imgs/logo_full.png';

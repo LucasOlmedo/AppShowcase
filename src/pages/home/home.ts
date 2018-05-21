@@ -6,6 +6,8 @@ import { EventsPage } from '../events/events';
 import { WorshipPage } from '../worship/worship';
 import { SettingsPage } from '../settings/settings';
 import { ArticlesPage } from '../articles/articles';
+import { APP_LOGO } from '../../constants/constants';
+import { ConfigProvider } from '../../providers/config/config';
 
 @Component({
   selector: 'page-home',
@@ -13,8 +15,14 @@ import { ArticlesPage } from '../articles/articles';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  appLogo: String = APP_LOGO;
 
+  constructor(
+    private navCtrl: NavController,
+    private config: ConfigProvider,
+  ) {
+    this.config.getLogo()
+      .subscribe(value => this.appLogo = value);
   }
 
   settingsPage() {
