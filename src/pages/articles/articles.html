@@ -7,5 +7,37 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-card *ngFor="let article of articles" class="single-article">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{article.avatar}}" alt="">
+      </ion-avatar>
+      <h2>{{article.author}}</h2>
+      <p>{{article.post_date}}</p>
+    </ion-item>
+    <img src="{{article.post_img}}" alt="">
+    <ion-card-content>
+      <p>
+        {{article.post_summary}}
+      </p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button clear small>
+          <ion-icon class="icon-theme" name="heart-outline"></ion-icon>
+        </button>
+        <button ion-button clear small>
+          <ion-icon class="icon-theme" name="share"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <p float-right margin-right>
+          <small class="note">
+            11h ago
+          </small>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 </ion-content>

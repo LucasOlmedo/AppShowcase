@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ArticlesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { FAKE_ARTICLES } from '../../constants/constants';
 
 @IonicPage()
 @Component({
@@ -15,11 +9,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ArticlesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  private articles: any;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ArticlesPage');
+  constructor(
+    private navCtrl: NavController,
+    private navParams: NavParams
+  ) {
+    this.articles = FAKE_ARTICLES;
   }
 
 }

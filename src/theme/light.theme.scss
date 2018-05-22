@@ -24,35 +24,4 @@
     background-color: #333;
   }
 
-  ion-card {
-    background: rgb(15, 15, 15);
-  }
-
-  .season-card-content {
-    color: black;
-    background: color($colors, light);
-  }
-
-}
-
-ion-modal {
-  .light-theme {
-
-    height: inherit;
-
-    .toolbar-background {
-      background-color: color($colors, light);
-    }
-  }
-
-  .modal-alert {
-    top: 20%;
-    left: 10%;
-    width: 80%;
-    height: 51.6%;
-    display: block;
-    position: absolute;
-    box-shadow: 0px 0px 0px 10000px rgba(0, 0, 0, 0.5);
-  }
-
 }
