@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
+import { APP_LOGO } from '../../constants/constants';
+import { ConfigProvider } from '../../providers/config/config';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the AboutPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +10,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  appLogo: String = APP_LOGO;
+
+  constructor(
+    private navParams: NavParams,
+    private navCtrl: NavController,
+    private config: ConfigProvider,
+  ) {
+    this.config.getLogo()
+      .subscribe(value => this.appLogo = value);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AboutPage');
+  private linkFacebook() {
+    window.open('https://www.facebook.com/NaContramaoOficial/', '_blank');
+  }
+
+  private linkInstagram() {
+    window.open('https://www.instagram.com/nacontramaooficial/', '_blank');
+  }
+
+  private linkYoutube() {
+    window.open('https://www.youtube.com/', '_blank');
   }
 
 }

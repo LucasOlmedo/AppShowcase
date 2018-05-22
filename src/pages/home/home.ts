@@ -26,7 +26,7 @@ export class HomePage {
   }
 
   settingsPage() {
-    this.navCtrl.setRoot(SettingsPage);
+    this.navCtrl.push(SettingsPage);
   }
 
   articlesPage() {
@@ -46,7 +46,7 @@ export class HomePage {
   }
 
   aboutPage() {
-    this.navCtrl.setRoot(AboutPage);
+    this.navCtrl.push(AboutPage);
   }
 
 }

@@ -1,9 +1,13 @@
 page-home {
 
     .main-title {
-        width: 93%;
+        width: 95%;
         top: 6px;
         position: relative;
+    }
+
+    .toolbar-title-ios > .main-title {
+        top: 0px;
     }
 
     .card-bg {
