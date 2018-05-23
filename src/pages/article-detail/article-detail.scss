@@ -1,0 +1,23 @@
+page-article-detail {
+
+    .post-img {
+        position: relative;
+        left: 0;
+    }
+
+    span.post-title {
+        font-size: 1.5em;
+        vertical-align: super;
+    }
+
+    span.post-subtitle {
+        font-size: 1.2em;
+    }
+
+    .post-categories {
+        ion-badge {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}

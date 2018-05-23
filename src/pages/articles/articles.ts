@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FAKE_ARTICLES } from '../../constants/constants';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ArticleDetailPage } from '../article-detail/article-detail';
 
 @IonicPage()
 @Component({
@@ -16,6 +17,12 @@ export class ArticlesPage {
     private navParams: NavParams
   ) {
     this.articles = FAKE_ARTICLES;
+  }
+
+  private articleDetails(article) {
+    this.navCtrl.push(ArticleDetailPage, {
+      article: article
+    });
   }
 
 }

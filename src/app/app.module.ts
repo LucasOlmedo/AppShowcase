@@ -15,6 +15,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { ArticlesPage } from '../pages/articles/articles';
 
 import { ConfigProvider } from '../providers/config/config';
+import { ArticleDetailPage } from '../pages/article-detail/article-detail';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ConfigProvider } from '../providers/config/config';
     WorshipPage,
     ArticlesPage,
     SettingsPage,
+    ArticleDetailPage,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { ConfigProvider } from '../providers/config/config';
     WorshipPage,
     ArticlesPage,
     SettingsPage,
+    ArticleDetailPage,
   ],
   providers: [
     StatusBar,

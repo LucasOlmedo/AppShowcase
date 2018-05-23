@@ -65,14 +65,15 @@
   }
 
   .single-article {
-    background-color: #5c5c5c;
+    background-color: color($colors, dark);
+    border: 1px rgb(88, 88, 88) solid;
 
-    p, small {
+    p, small, h2, span {
       color: lightgrey;
     }
 
     ion-item {
-      background-color: #5c5c5c;
+      background-color: color($colors, dark);
       h2 {
         color: color($colors, light);
       }

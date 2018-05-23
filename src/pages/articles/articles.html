@@ -7,21 +7,25 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="card-bg">
   <ion-card *ngFor="let article of articles" class="single-article">
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="{{article.avatar}}" alt="">
-      </ion-avatar>
-      <h2>{{article.author}}</h2>
-      <p>{{article.post_date}}</p>
-    </ion-item>
-    <img src="{{article.post_img}}" alt="">
-    <ion-card-content>
-      <p>
-        {{article.post_summary}}
-      </p>
-    </ion-card-content>
+    <button ion-item class="article-btn" (click)="articleDetails(article)">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{article.avatar}}" alt="">
+        </ion-avatar>
+        <h2>{{article.author}}</h2>
+        <p class="post-date">{{article.post_date}}</p>
+      </ion-item>
+      <img class="article-img" src="{{article.post_img}}" alt="">
+      <ion-card-content text-wrap>
+        <h2>{{article.title}}</h2>
+        <hr>
+        <span>
+          {{article.post_summary}}
+        </span>
+      </ion-card-content>
+    </button>
     <ion-row>
       <ion-col>
         <button ion-button clear small>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end margin-right>
+      <button ion-button icon-only>
+        <ion-icon name="heart-outline"></ion-icon>
+      </button>
+      <button ion-button icon-only>
+        <ion-icon name="share"></ion-icon>
+      </button>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <img class="post-img" src="{{article.post_img}}" alt="">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <span class="post-title" margin text-wrap>
+          {{article.title}}
+        </span>
+        <br>
+        <span class="post-subtitle" margin text-wrap>
+          <small>{{article.author}} - {{article.post_date}}</small>
+        </span>
+        <br>
+        <div class="post-categories" margin>
+          <ion-badge *ngFor="let category of article.categories" color="{{category.color}}">
+            {{category.name}}
+          </ion-badge>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div margin text-justify [innerHtml]="article.post_content"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
