@@ -21,15 +21,15 @@ export class AboutPage {
       .subscribe(value => this.appLogo = value);
   }
 
-  private linkFacebook() {
+  linkFacebook() {
     window.open('https://www.facebook.com/NaContramaoOficial/', '_blank');
   }
 
-  private linkInstagram() {
+  linkInstagram() { 
     window.open('https://www.instagram.com/nacontramaooficial/', '_blank');
   }
 
-  private linkYoutube() {
+  linkYoutube() {
     window.open('https://www.youtube.com/', '_blank');
   }
 

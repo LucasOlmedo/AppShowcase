@@ -19,7 +19,7 @@ export class ArticlesPage {
     this.articles = FAKE_ARTICLES;
   }
 
-  private articleDetails(article) {
+  articleDetails(article) {
     this.navCtrl.push(ArticleDetailPage, {
       article: article
     });
