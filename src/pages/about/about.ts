@@ -30,7 +30,7 @@ export class AboutPage {
   }
 
   linkYoutube() {
-    window.open('https://www.youtube.com/', '_blank');
+    window.open('https://www.youtube.com/channel/UCPBoGJ4ZRgugIzrsKt9-fIw', '_blank');
   }
 
 }
