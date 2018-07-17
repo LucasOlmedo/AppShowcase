@@ -81,3 +81,17 @@ export const FAKE_ARTICLES = [
         ]
     },
 ];
+export const ARTICLE_FILTER = {
+    AUTHOR: [
+        'Usuário Autor' 
+    ],
+    CATEGORIES: [
+        'Adoração',
+        'Artigo',
+        'Devocional',
+        'Estudos',
+        'Igreja',
+        'Relacionamento',
+        'Teologia',
+    ] 
+};

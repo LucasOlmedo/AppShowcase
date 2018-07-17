@@ -23,5 +23,23 @@
   .button-theme.activated {
     background-color: #333;
   }
+}
 
+ion-modal {
+  .light {
+    height: inherit;
+    
+    .toolbar-background {
+      background-color: color($colors, light);
+    }
+
+    .button-theme {
+      color: color($colors, light);
+      background-color: #333;
+    }
+  
+    .button-theme.activated {
+      background-color: #333;
+    }
+  } 
 }

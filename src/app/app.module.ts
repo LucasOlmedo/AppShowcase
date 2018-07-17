@@ -12,7 +12,7 @@ import { BiblePage } from '../pages/bible/bible';
 import { EventsPage } from '../pages/events/events';
 import { WorshipPage } from '../pages/worship/worship';
 import { SettingsPage } from '../pages/settings/settings';
-import { ArticlesPage } from '../pages/articles/articles';
+import { ArticlesPage, FilterArticleModal } from '../pages/articles/articles';
 
 import { ConfigProvider } from '../providers/config/config';
 import { ArticleDetailPage } from '../pages/article-detail/article-detail';
@@ -28,6 +28,7 @@ import { ArticleDetailPage } from '../pages/article-detail/article-detail';
     ArticlesPage,
     SettingsPage,
     ArticleDetailPage,
+    FilterArticleModal,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +46,7 @@ import { ArticleDetailPage } from '../pages/article-detail/article-detail';
     ArticlesPage,
     SettingsPage,
     ArticleDetailPage,
+    FilterArticleModal,
   ],
   providers: [
     StatusBar,

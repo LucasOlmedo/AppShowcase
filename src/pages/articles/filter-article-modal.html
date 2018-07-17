@@ -1,0 +1,35 @@
+<div class="{{theme}} filter-article-modal">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Filtrar Artigos
+      </ion-title>
+      <ion-buttons end margin-right>
+        <button ion-button (click)="dismiss()">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-item padding-right>
+      <ion-label>Autor</ion-label>
+      <ion-select>
+        <ion-option *ngFor="let author of filter.AUTHOR" value="{{author}}">{{author}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item padding-right>
+      <ion-label>Categoria</ion-label>
+      <ion-select>
+        <ion-option *ngFor="let category of filter.CATEGORIES" value="{{category}}">{{category}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item padding-right>
+      <ion-label>Data de publicação</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+    </ion-item>
+    <ion-row padding>
+      <button ion-button block class="button-theme" (click)="applyFilters()"> Aplicar </button>
+    </ion-row>
+  </ion-content>
+</div>

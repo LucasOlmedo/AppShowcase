@@ -30,6 +30,7 @@
     color: #424242;
     background-color: color($colors, light);
   }
+
   .button-theme.activated {
     background-color: color($colors, light);
   }
@@ -79,4 +80,41 @@
       }
     }
   }
+}
+
+ion-modal {
+  .dark {
+    height: inherit;
+
+    .toolbar-title {
+      color: color($colors, light);
+    }
+    
+    .toolbar-background {
+      background-color: color($colors, dark);
+    }
+
+    .toolbar button {
+      color: color($colors, light);
+    }
+
+    ion-item {
+      color: color($colors, light);
+      background-color: color($colors, dark);
+    }
+
+    .item-select {
+      background-color: color($colors, dark);
+      color: color($colors, light);
+    }
+
+    .button-theme {
+      color: #424242;
+      background-color: color($colors, light);
+    }
+  
+    .button-theme.activated {
+      background-color: color($colors, light);
+    }
+  } 
 }

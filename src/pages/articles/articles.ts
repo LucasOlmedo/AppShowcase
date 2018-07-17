@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FAKE_ARTICLES } from '../../constants/constants';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ConfigProvider } from '../../providers/config/config';
 import { ArticleDetailPage } from '../article-detail/article-detail';
+import { FAKE_ARTICLES, ARTICLE_FILTER } from '../../constants/constants';
+import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -11,15 +12,20 @@ import { ArticleDetailPage } from '../article-detail/article-detail';
 export class ArticlesPage {
 
   private articles: any;
+  private activeTheme: any;
 
   constructor(
+    private navParams: NavParams,
+    private config: ConfigProvider,
     private navCtrl: NavController,
-    private navParams: NavParams
+    private modalCtrl: ModalController,
   ) {
     this.initArticles();
+    this.config.getTheme()
+      .subscribe(theme => this.activeTheme = theme);
   }
 
-  initArticles() {
+  private initArticles() {
     return this.articles = FAKE_ARTICLES;
   }
 
@@ -40,4 +46,41 @@ export class ArticlesPage {
     }
   }
 
+  filterArticles() {
+    let modal = this.modalCtrl.create(FilterArticleModal, {
+      filter: ARTICLE_FILTER,
+      theme: this.activeTheme
+    });
+    modal.present();
+  }
+}
+
+@Component({
+  selector: 'filter-article-modal',
+  templateUrl: 'filter-article-modal.html'
+})
+export class FilterArticleModal {
+
+  private filter: any = {};
+  private theme: any = '';
+
+  constructor(
+    private params: NavParams,
+    private view: ViewController,
+  ) {
+    this.getParams();
+  }
+
+  private getParams() {
+    this.filter = this.params.data.filter;
+    this.theme = this.params.data.theme;
+  }
+
+  applyFilters() {
+    this.view.dismiss();
+  }
+
+  dismiss() {
+    this.view.dismiss();
+  }
 }
