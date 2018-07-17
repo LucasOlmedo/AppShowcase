@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import { APP_LOGO } from '../../constants/constants';
 import { ConfigProvider } from '../../providers/config/config';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {
+  IonicPage,
+  NavController,
+  NavParams
+} from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -25,7 +29,7 @@ export class AboutPage {
     window.open('https://www.facebook.com/NaContramaoOficial/', '_blank');
   }
 
-  linkInstagram() { 
+  linkInstagram() {
     window.open('https://www.instagram.com/nacontramaooficial/', '_blank');
   }
 

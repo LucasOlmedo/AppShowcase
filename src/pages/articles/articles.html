@@ -5,15 +5,19 @@
     </button>
     <ion-title>Artigos</ion-title>
     <ion-buttons end margin-right>
+      <button ion-button icon-only (click)="toogleSearch()">
+        <ion-icon [name]="searchbar ? 'close' : 'search'"></ion-icon>
+      </button>
       <button ion-button class="icon-theme" clear icon-only (click)="filterArticles()">
         <ion-icon name="funnel"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
+  <ion-toolbar *ngIf="searchbar">
+    <ion-searchbar (ionInput)="searchArticles($event)" placeholder="Pesquisar"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
-
 <ion-content class="card-bg">
-  <ion-searchbar (ionInput)="searchArticles($event)" placeholder="Pesquisar..."></ion-searchbar>
   <ion-card *ngFor="let article of articles" class="single-article">
     <button ion-item class="article-btn" (click)="articleDetails(article)">
       <ion-item>

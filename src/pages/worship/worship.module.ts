@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
 import { WorshipPage } from './worship';
+import { IonicPageModule } from 'ionic-angular';
 
 @NgModule({
   declarations: [
@@ -10,4 +10,4 @@ import { WorshipPage } from './worship';
     IonicPageModule.forChild(WorshipPage),
   ],
 })
-export class WorshipPageModule {}
+export class WorshipPageModule { }

@@ -18,11 +18,11 @@ export class ConfigProvider {
     this.storage.get('theme')
       .then(value => {
         if (value != null) {
-          this.theme.next(value);
           this.setLogo(value);
+          this.theme.next(value);
         } else {
-          this.storage.set('theme', 'light');
           this.setLogo('light');
+          this.storage.set('theme', 'light');
         }
       });
   }
@@ -30,8 +30,8 @@ export class ConfigProvider {
   public setTheme(val) {
     this.storage.set('theme', val)
       .then(value => {
-          this.theme.next(value);
-          this.setLogo(value);
+        this.setLogo(value);
+        this.theme.next(value);
       });
   }
 

@@ -10,4 +10,4 @@ import { ArticleDetailPage } from './article-detail';
     IonicPageModule.forChild(ArticleDetailPage),
   ],
 })
-export class ArticleDetailPageModule {}
+export class ArticleDetailPageModule { }

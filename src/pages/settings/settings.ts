@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import {
+  IonicPage,
+  NavController,
+  NavParams,
+  ToastController
+} from 'ionic-angular';
 import { ConfigProvider } from '../../providers/config/config';
 
 @IonicPage()
@@ -13,16 +18,18 @@ export class SettingsPage {
 
   constructor(
     private navParams: NavParams,
-    private toastView: ToastController,
     private config: ConfigProvider,
     private navCtrl: NavController,
+    private toastView: ToastController,
   ) {
-    this.config.getTheme()
+    this.config
+      .getTheme()
       .subscribe(val => this.theme = val);
   }
 
   public changeTheme(theme) {
-    this.config.setTheme(theme);
+    this.config
+      .setTheme(theme);
     let toast = this.toastView.create({
       message: 'Tema alterado!',
       duration: 1500,
@@ -30,5 +37,4 @@ export class SettingsPage {
     });
     toast.present();
   }
-
 }

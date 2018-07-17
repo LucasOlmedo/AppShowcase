@@ -1,8 +1,21 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+} from '@angular/core';
 import { ConfigProvider } from '../../providers/config/config';
 import { ArticleDetailPage } from '../article-detail/article-detail';
-import { FAKE_ARTICLES, ARTICLE_FILTER } from '../../constants/constants';
-import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
+import {
+  FAKE_ARTICLES,
+  ARTICLE_FILTER,
+} from '../../constants/constants';
+import {
+  Content,
+  IonicPage,
+  NavParams,
+  NavController,
+  ViewController,
+  ModalController,
+} from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -11,8 +24,11 @@ import { IonicPage, NavController, NavParams, ModalController, ViewController } 
 })
 export class ArticlesPage {
 
+  @ViewChild(Content) content: Content;
+
   private articles: any;
   private activeTheme: any;
+  private searchbar: boolean = false;
 
   constructor(
     private navParams: NavParams,
@@ -33,6 +49,14 @@ export class ArticlesPage {
     this.navCtrl.push(ArticleDetailPage, {
       article: article
     });
+  }
+
+  toogleSearch() {
+    this.searchbar = !this.searchbar;
+    if (!this.searchbar) {
+      this.initArticles();
+    }
+    this.content.resize();
   }
 
   searchArticles($event: any) {
@@ -61,8 +85,8 @@ export class ArticlesPage {
 })
 export class FilterArticleModal {
 
-  private filter: any = {};
   private theme: any = '';
+  private filter: any = {};
 
   constructor(
     private params: NavParams,
@@ -72,8 +96,8 @@ export class FilterArticleModal {
   }
 
   private getParams() {
-    this.filter = this.params.data.filter;
     this.theme = this.params.data.theme;
+    this.filter = this.params.data.filter;
   }
 
   applyFilters() {

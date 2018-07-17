@@ -18,8 +18,8 @@ export class HomePage {
   appLogo: String = APP_LOGO;
 
   constructor(
-    private navCtrl: NavController,
     private config: ConfigProvider,
+    private navCtrl: NavController,
   ) {
     this.config.getLogo()
       .subscribe(value => this.appLogo = value);

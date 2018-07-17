@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
 import { SettingsPage } from './settings';
+import { IonicPageModule } from 'ionic-angular';
 
 @NgModule({
   declarations: [
@@ -10,4 +10,4 @@ import { SettingsPage } from './settings';
     IonicPageModule.forChild(SettingsPage),
   ],
 })
-export class SettingsPageModule {}
+export class SettingsPageModule { }
