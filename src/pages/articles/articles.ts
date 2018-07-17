@@ -16,13 +16,28 @@ export class ArticlesPage {
     private navCtrl: NavController,
     private navParams: NavParams
   ) {
-    this.articles = FAKE_ARTICLES;
+    this.initArticles();
+  }
+
+  initArticles() {
+    return this.articles = FAKE_ARTICLES;
   }
 
   articleDetails(article) {
     this.navCtrl.push(ArticleDetailPage, {
       article: article
     });
+  }
+
+  searchArticles($event: any) {
+    this.initArticles();
+    let query = $event.target.value;
+
+    if (query && query.trim() != '') {
+      this.articles = this.articles.filter((item) => {
+        return (item.title.toLowerCase().indexOf(query.toLowerCase()) > -1);
+      })
+    }
   }
 
 }

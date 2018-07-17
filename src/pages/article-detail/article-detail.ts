@@ -11,10 +11,10 @@ export class ArticleDetailPage {
   article: any;
 
   constructor(
-    private navCtrl: NavController, 
+    private navCtrl: NavController,
     private navParams: NavParams,
   ) {
-    this.article = navParams.get('article');
+    this.article = this.navParams.get('article');
   }
 
 }

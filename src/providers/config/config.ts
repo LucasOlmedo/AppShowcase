@@ -1,7 +1,6 @@
 import { Storage } from "@ionic/storage";
 import { BehaviorSubject } from "rxjs/Rx";
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ConfigProvider {
