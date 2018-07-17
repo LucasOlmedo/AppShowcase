@@ -4,7 +4,20 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Eventos</ion-title>
+    <ion-buttons end margin-right>
+      <button ion-button icon-only (click)="toogleSearch()">
+        <ion-icon [name]="searchbar ? 'close' : 'search'"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+  <ion-toolbar *ngIf="searchbar">
+    <ion-searchbar (ionInput)="searchEvents($event)" placeholder="Pesquisar"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
-<ion-content padding>
+<ion-content>
+  <ion-card *ngFor="let event of events">
+    <ion-card-content text-wrap>
+      <h2>{{event.title}}</h2>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

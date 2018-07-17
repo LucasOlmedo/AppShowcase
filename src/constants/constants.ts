@@ -17,7 +17,7 @@ export const FAKE_ARTICLES = [
                 name: 'Devocional',
                 color: 'category-sea'
             },
-        ] 
+        ]
     },
     {
         avatar: 'assets/imgs/avatar.png',
@@ -83,7 +83,7 @@ export const FAKE_ARTICLES = [
 ];
 export const ARTICLE_FILTER = {
     AUTHOR: [
-        'Usuário Autor' 
+        'Usuário Autor'
     ],
     CATEGORIES: [
         'Adoração',
@@ -93,5 +93,28 @@ export const ARTICLE_FILTER = {
         'Igreja',
         'Relacionamento',
         'Teologia',
-    ] 
+    ]
 };
+export const FAKE_EVENTS = [
+    {
+        main_image: '',
+        color: 'blue',
+        title: 'Esse é o Tempo #ConferênciaNaContramão',
+        start_date: '19 de Julho',
+        end_date: '21 de Julho',
+    },
+    {
+        main_image: '',
+        color: 'red',
+        title: 'Evento 2',
+        start_date: '19 de Julho',
+        end_date: '21 de Julho',
+    },
+    {
+        main_image: '',
+        color: 'yellow',
+        title: 'Evento 3',
+        start_date: '19 de Julho',
+        end_date: '21 de Julho',
+    },
+];
