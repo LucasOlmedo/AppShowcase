@@ -5,11 +5,14 @@
     </button>
     <ion-title>Artigos</ion-title>
     <ion-buttons end margin-right>
-      <button ion-button icon-only (click)="toogleSearch()">
+      <button ion-button class="icon-theme" icon-only (click)="toogleSearch()">
         <ion-icon [name]="searchbar ? 'close' : 'search'"></ion-icon>
       </button>
       <button ion-button class="icon-theme" clear icon-only (click)="filterArticles()">
         <ion-icon name="funnel"></ion-icon>
+      </button>
+      <button ion-button class="icon-theme" clear icon-only>
+        <ion-icon name="sync"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -18,6 +21,11 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="card-bg">
+  <ion-fab right bottom margin-right>
+    <button ion-fab class="button-theme">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
   <ion-card *ngFor="let article of articles" class="single-article">
     <button ion-item class="article-btn" (click)="articleDetails(article)">
       <ion-item>
@@ -36,21 +44,17 @@
         </span>
       </ion-card-content>
     </button>
-    <ion-row>
+    <ion-row text-left>
       <ion-col>
         <button ion-button clear small>
           <ion-icon class="icon-theme" name="heart-outline"></ion-icon>
         </button>
         <button ion-button clear small>
+          <ion-icon class="icon-theme" name="download"></ion-icon>
+        </button>
+        <button ion-button clear small>
           <ion-icon class="icon-theme" name="share"></ion-icon>
         </button>
-      </ion-col>
-      <ion-col center text-center>
-        <p float-right margin-right>
-          <small class="note">
-            11h ago
-          </small>
-        </p>
       </ion-col>
     </ion-row>
   </ion-card>

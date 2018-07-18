@@ -39,6 +39,11 @@ $colors: (
   danger:                 #f53d3d,
   light:                  white,
   dark:                   #424242,
+  darken:                 #202020,
+  golden:                 rgb(238, 209, 42),
+  metal:                  #707070, 
+  woods:                  rgb(30, 128, 30),
+  cream:                  rgb(246, 208, 255), 
   facebook:               #3b5998,
   instagram:              #cd486b,
   youtube:                #ca302a,
@@ -98,3 +103,6 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+// Common scss
+@import "common";

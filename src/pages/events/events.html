@@ -5,8 +5,11 @@
     </button>
     <ion-title>Eventos</ion-title>
     <ion-buttons end margin-right>
-      <button ion-button icon-only (click)="toogleSearch()">
+      <button ion-button class="icon-theme" icon-only (click)="toogleSearch()">
         <ion-icon [name]="searchbar ? 'close' : 'search'"></ion-icon>
+      </button>
+      <button ion-button class="icon-theme" icon-only>
+        <ion-icon name="calendar"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -15,9 +18,39 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-card *ngFor="let event of events">
-    <ion-card-content text-wrap>
-      <h2>{{event.title}}</h2>
+  <ion-fab right bottom margin-right>
+    <button ion-fab class="button-theme">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-card *ngFor="let event of events" tappable>
+    <ion-card-content class="event-card-content">
+      <ion-grid class="inner-grid-event">
+        <ion-row>
+          <ion-col col-4 class="date-box {{event.color}}" padding>
+            <ion-row>
+              <h1 class="event-date-title">
+                {{event.date_d}}
+                <br> {{event.date_m}}
+              </h1>
+            </ion-row>
+          </ion-col>
+          <ion-col col-8 padding>
+            <ion-row>
+              <h2 class="text-break-word">
+                {{event.title}}
+              </h2>
+            </ion-row>
+            <ion-row>
+              <h2>
+                <small style="font-size:85%">
+                  {{event.date_h}}
+                </small>
+              </h2>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-card-content>
   </ion-card>
 </ion-content>

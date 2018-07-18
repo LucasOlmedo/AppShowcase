@@ -1,0 +1,80 @@
+.text-break-word {
+    word-break: break-word;
+    color: initial;
+}
+
+.event-card-content {
+    padding: 0px !important;
+}
+
+.inner-grid-event {
+    padding: 0px !important;
+}
+
+.date-box {
+    display: grid;
+}
+
+.date-box > ion-row {
+    text-align: center;
+    position: relative;
+}
+
+.event-date-title {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.date-box.blue{
+    background-color: color($colors, primary);
+
+    .event-date-title {
+        color: color($colors, light);
+    }
+}
+
+.date-box.red {
+    background-color: color($colors, danger);
+
+    .event-date-title {
+        color: color($colors, light);
+    }
+}
+
+.date-box.yellow {
+    background-color: color($colors, golden);
+
+    .event-date-title {
+        color: color($colors, darken); 
+    }
+}
+
+.date-box.grey {
+    background-color: color($colors, metal);
+
+    .event-date-title {
+        color: color($colors, light); 
+    }
+}
+
+.date-box.cream {
+    background-color: color($colors, cream);
+
+    .event-date-title {
+        color: color($colors, darken);
+    }
+}
+
+.date-box.green {
+    background-color: color($colors, woods);
+
+    .event-date-title {
+        color: color($colors, light); 
+    }
+}
+
+.filter-article-modal > .header-ios, .filter-article-modal > .content-ios{
+    top:24px !important;
+}
