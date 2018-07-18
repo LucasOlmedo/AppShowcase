@@ -26,6 +26,7 @@ import {
 
 import { ConfigProvider } from '../providers/config/config';
 import { ArticleDetailPage } from '../pages/article-detail/article-detail';
+import { EventDetailPage } from '../pages/event-detail/event-detail';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ArticleDetailPage } from '../pages/article-detail/article-detail';
     WorshipPage,
     ArticlesPage,
     SettingsPage,
+    EventDetailPage,
     ArticleDetailPage,
     FilterArticleModal,
   ],
@@ -55,6 +57,7 @@ import { ArticleDetailPage } from '../pages/article-detail/article-detail';
     WorshipPage,
     ArticlesPage,
     SettingsPage,
+    EventDetailPage,
     ArticleDetailPage,
     FilterArticleModal,
   ],

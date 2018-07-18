@@ -80,6 +80,16 @@
       }
     }
   }
+
+  .event-infobox {
+    background-color: color($colors, darkplus);
+    h2 {
+      color: color($colors, light); 
+    }
+    small{
+      color: rgb(139, 139, 139);
+    }
+  }
 }
 
 ion-modal {

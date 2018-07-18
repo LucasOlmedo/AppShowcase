@@ -17,13 +17,13 @@
     <ion-searchbar (ionInput)="searchEvents($event)" placeholder="Pesquisar"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content class="events-content">
   <ion-fab right bottom margin-right>
     <button ion-fab class="button-theme">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
-  <ion-card *ngFor="let event of events" tappable>
+  <ion-card *ngFor="let event of events" tappable (click)="eventDetails(event)">
     <ion-card-content class="event-card-content">
       <ion-grid class="inner-grid-event">
         <ion-row>
@@ -35,7 +35,7 @@
               </h1>
             </ion-row>
           </ion-col>
-          <ion-col col-8 padding>
+          <ion-col col-8 padding class="event-infobox"> 
             <ion-row>
               <h2 class="text-break-word">
                 {{event.title}}

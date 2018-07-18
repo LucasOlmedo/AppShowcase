@@ -9,6 +9,7 @@ import {
   NavController,
 } from 'ionic-angular';
 import { FAKE_EVENTS } from '../../constants/constants';
+import { EventDetailPage } from '../event-detail/event-detail';
 
 @IonicPage()
 @Component({
@@ -33,6 +34,12 @@ export class EventsPage {
     return this.events = FAKE_EVENTS;
   }
 
+  eventDetails(event) {
+    this.navCtrl.push(EventDetailPage, {
+      event: event
+    });
+  }
+
   toogleSearch() {
     this.searchbar = !this.searchbar;
     if (!this.searchbar) {
@@ -41,7 +48,7 @@ export class EventsPage {
     this.content.resize();
   }
 
-  searchEvents($event: any) { 
+  searchEvents($event: any) {
     this.initEvents();
     let query = $event.target.value;
 
