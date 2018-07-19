@@ -97,36 +97,43 @@ export const ARTICLE_FILTER = {
 };
 export const FAKE_EVENTS = [
     {
-        main_image: '',
+        creator: 'Administrador',
         color: 'blue',
         title: 'Esse é o Tempo #ConferênciaNaContramão',
         date_d: 19, 
         date_m: 'Jul',
         date_h: '19:00 - 21:20',
-
+        date_string: 'Quinta-feira, 19 de Julho',
+        description: 'Lorem ipsum fringilla a ipsum venenatis et ut hendrerit platea, habitant elementum eleifend torquent congue class enim odio sodales velit, leo vel nisl ut accumsan lobortis faucibus bibendum. lorem nibh risus scelerisque vitae a imperdiet iaculis primis purus, libero nisl mollis ac felis porttitor vulputate iaculis, egestas pharetra semper tempus a etiam erat nulla. '
     },
     {
-        main_image: '',
+        creator: 'Administrador',
         color: 'red',
         title: 'Retiro com o ministério Na Contramão - Campos do Jordão',
         date_d: 31, 
         date_m: 'Ago',
-        date_h: 'O dia todo'
+        date_h: 'Dia todo',
+        date_string: 'Sexta-feira, 31 de Agosto',
+        description: 'Lorem ipsum fringilla a ipsum venenatis et ut hendrerit platea, habitant elementum eleifend torquent congue class enim odio sodales velit, leo vel nisl ut accumsan lobortis faucibus bibendum. lorem nibh risus scelerisque vitae a imperdiet iaculis primis purus, libero nisl mollis ac felis porttitor vulputate iaculis, egestas pharetra semper tempus a etiam erat nulla. '
     },
     {
-        main_image: '',
+        creator: 'Administrador',
         color: 'yellow', 
-        title: 'Reunião de Jovens',
+        title: 'Ensaio - Na Contramão',
         date_d: 8,
         date_m: 'Set',
-        date_h: '17:00',
+        date_h: '16:00',
+        date_string: 'Sábado, 8 de Setembro',
+        description: 'Lorem ipsum fringilla a ipsum venenatis et ut hendrerit platea, habitant elementum eleifend torquent congue class enim odio sodales velit, leo vel nisl ut accumsan lobortis faucibus bibendum. lorem nibh risus scelerisque vitae a imperdiet iaculis primis purus, libero nisl mollis ac felis porttitor vulputate iaculis, egestas pharetra semper tempus a etiam erat nulla. '
     },
     {
-        main_image: '', 
+        creator: 'Administrador',
         color: 'green',
-        title: 'Ensaio - Na Contramão',
-        date_d: 7,
+        title: 'Reunião de Jovens',
+        date_d: 10,
         date_m: 'Nov',
-        date_h: '16:30',
+        date_h: '17:00',
+        date_string: 'Domingo, 7 de Novembro',
+        description: 'Lorem ipsum fringilla a ipsum venenatis et ut hendrerit platea, habitant elementum eleifend torquent congue class enim odio sodales velit, leo vel nisl ut accumsan lobortis faucibus bibendum. lorem nibh risus scelerisque vitae a imperdiet iaculis primis purus, libero nisl mollis ac felis porttitor vulputate iaculis, egestas pharetra semper tempus a etiam erat nulla. '
     },
 ];

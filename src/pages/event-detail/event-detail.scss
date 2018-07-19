@@ -1,3 +1,37 @@
 page-event-detail {
+    .event-title > .toolbar-title {
+        padding: 0px !important; 
+        position: relative;
+    }
 
+    .event-title {
+        div.event-color-header {
+            padding: 40px 0px 15px 0px;
+        }
+
+        .event-creator {
+            font-size: 0.7em;
+            font-weight: initial;
+        }
+
+        .blue {
+            background-color: color($colors, primary);
+            color: color($colors, light);
+        }
+
+        .red {
+            background-color: color($colors, danger);
+            color: color($colors, light);
+        }
+
+        .yellow {
+            background-color: color($colors, golden);
+            color: color($colors, darken);
+        }
+
+        .green {
+            background-color: color($colors, woods);
+            color: color($colors, light);
+        }
+    }
 }

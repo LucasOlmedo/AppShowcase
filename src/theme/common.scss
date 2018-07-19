@@ -56,22 +56,6 @@
     }
 }
 
-.date-box.grey {
-    background-color: color($colors, metal);
-
-    .event-date-title {
-        color: color($colors, light); 
-    }
-}
-
-.date-box.cream {
-    background-color: color($colors, cream);
-
-    .event-date-title {
-        color: color($colors, darken);
-    }
-}
-
 .date-box.green {
     background-color: color($colors, woods);
 

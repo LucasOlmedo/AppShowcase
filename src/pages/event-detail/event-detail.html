@@ -1,7 +1,74 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Detalhes do evento</ion-title>
+    <ion-buttons end margin-right>
+      <button class="icon-theme" ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
+<ion-content>
+  <ion-title class="event-title" text-center>
+    <div class="{{event.color}} event-color-header" text-wrap>
+      <span>
+        {{event.title}}
+      </span>
+      <br>
+      <br>
+      <span class="event-creator">
+        <i>Criado por {{event.creator}}</i>
+      </span>
+    </div>
+  </ion-title>
+  <ion-fab bottom right margin-right>
+    <button ion-fab mini class="button-theme">
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab class="button-theme">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+      <button ion-fab class="button-theme">
+        <ion-icon name="share"></ion-icon>
+      </button>
+      <button ion-fab class="button-theme">
+        <ion-icon name="thumbs-up"></ion-icon>
+      </button>
+      <button ion-fab class="button-theme">
+        <ion-icon name="calendar"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col col-1>
+        <ion-icon name="calendar"></ion-icon>
+      </ion-col>
+      <ion-col>
+        {{event.date_string}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-1>
+        <ion-icon name="time"></ion-icon>
+      </ion-col>
+      <ion-col>
+        {{event.date_h}}
+      </ion-col>
+    </ion-row>
+    <ion-row margin-top>
+      <ion-col>
+        <strong style="font-size: 1.2em;">
+          Descrição
+        </strong>
+        <hr>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        {{event.description}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
