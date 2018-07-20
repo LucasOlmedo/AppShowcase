@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button class="icon-theme" menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Meu Perfil</ion-title>
+    <ion-buttons end margin-right>
+      <button ion-button class="icon-theme" icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-fab right bottom margin-right>
+    <button ion-fab class="button-theme">
+      <ion-icon name="create"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="user-avatar">
+          <img src="{{user.avatar}}">
+          <hr>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <h3>
+          {{user.name}}
+          <br>
+          <small style="font-weight: 300">
+            {{user.role}}
+          </small>
+        </h3>
+        <br>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-1>
+        <ion-icon name="calendar"></ion-icon>
+      </ion-col>
+      <ion-col>
+        {{user.date_of_birth}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-1>
+        <ion-icon name="call"></ion-icon>
+      </ion-col>
+      <ion-col>
+        {{user.phone}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-1>
+        <ion-icon name="mail"></ion-icon>
+      </ion-col>
+      <ion-col>
+        {{user.email}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-1>
+        <ion-icon name="pin"></ion-icon>
+      </ion-col>
+      <ion-col>
+        {{user.city}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

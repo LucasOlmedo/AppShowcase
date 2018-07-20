@@ -13,6 +13,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { ArticlesPage } from '../pages/articles/articles';
 
 import { ConfigProvider } from '../providers/config/config';
+import { ProfilePage } from '../pages/profile/profile';
 
 @Component({
   templateUrl: 'app.html'
@@ -53,6 +54,10 @@ export class MyApp {
   openPage(page) {
     this.nav.setRoot(page.component);
   }
+
+  profilePage() {  
+    this.nav.setRoot(ProfilePage); 
+  } 
 
   private initTheme() {
     this.config.getTheme()

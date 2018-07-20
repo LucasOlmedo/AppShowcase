@@ -14,3 +14,28 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-menu {
+    .user-avatar-profile {
+        display: -webkit-inline-box;
+    }
+
+    .user-name {
+        ion-icon {
+            vertical-align: middle;
+            font-size: 12px;
+            left: 5px;
+            position: relative;
+        }
+    }
+
+    ion-avatar > img {
+        width: 40% !important;
+        height: 40% !important; 
+    }
+
+    // ios custom css
+    .list-ios > .item-block:first-child {
+        border-top: initial !important;
+    }
+}

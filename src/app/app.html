@@ -1,12 +1,17 @@
 <div id="app" [class]="theme" fullscreen>
   <ion-menu [content]="content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
+    <ion-content padding-top>
       <ion-list>
+        <ion-item menuClose tappable text-center (click)="profilePage()"> 
+          <ion-avatar margin-bottom>
+            <img class="user-avatar-profile" src="assets/imgs/avatar.png">
+          </ion-avatar>
+          <h2 class="user-name">
+            Usuário Autor
+            <ion-icon color="secondary" name="radio-button-on"></ion-icon>
+          </h2>
+          <p>Administrador</p>
+        </ion-item>
         <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
           {{p.title}}
         </button>

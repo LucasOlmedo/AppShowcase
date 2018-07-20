@@ -100,7 +100,7 @@ export const FAKE_EVENTS = [
         creator: 'Administrador',
         color: 'blue',
         title: 'Esse é o Tempo #ConferênciaNaContramão',
-        date_d: 19, 
+        date_d: 19,
         date_m: 'Jul',
         date_h: '19:00 - 21:20',
         date_string: 'Quinta-feira, 19 de Julho',
@@ -110,7 +110,7 @@ export const FAKE_EVENTS = [
         creator: 'Administrador',
         color: 'red',
         title: 'Retiro com o ministério Na Contramão - Campos do Jordão',
-        date_d: 31, 
+        date_d: 31,
         date_m: 'Ago',
         date_h: 'Dia todo',
         date_string: 'Sexta-feira, 31 de Agosto',
@@ -118,7 +118,7 @@ export const FAKE_EVENTS = [
     },
     {
         creator: 'Administrador',
-        color: 'yellow', 
+        color: 'yellow',
         title: 'Ensaio - Na Contramão',
         date_d: 8,
         date_m: 'Set',
@@ -137,3 +137,12 @@ export const FAKE_EVENTS = [
         description: 'Lorem ipsum fringilla a ipsum venenatis et ut hendrerit platea, habitant elementum eleifend torquent congue class enim odio sodales velit, leo vel nisl ut accumsan lobortis faucibus bibendum. lorem nibh risus scelerisque vitae a imperdiet iaculis primis purus, libero nisl mollis ac felis porttitor vulputate iaculis, egestas pharetra semper tempus a etiam erat nulla. '
     },
 ];
+export const USER = {
+    avatar: 'assets/imgs/avatar.png',
+    name: 'Usuário Autor',
+    role: 'Administrador',
+    email: 'admin@app-ibanov.com.br',
+    date_of_birth: '21 de Março, 1997',
+    city: 'Avenida Itaquera, 204 - São Paulo, Brasil',
+    phone: '+55 11 99999-9999',
+};
