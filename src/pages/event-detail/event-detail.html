@@ -3,7 +3,7 @@
     <ion-title>Detalhes do evento</ion-title>
     <ion-buttons end margin-right>
       <button class="icon-theme" ion-button icon-only>
-        <ion-icon name="more"></ion-icon>
+        <ion-icon name="star-outline"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -23,20 +23,17 @@
   </ion-title>
   <ion-fab bottom right margin-right>
     <button ion-fab mini class="button-theme">
-      <ion-icon name="add"></ion-icon>
+      <ion-icon name="arrow-dropup"></ion-icon>
     </button>
     <ion-fab-list side="top">
       <button ion-fab class="button-theme">
-        <ion-icon name="checkmark"></ion-icon>
-      </button>
-      <button ion-fab class="button-theme">
-        <ion-icon name="share"></ion-icon>
-      </button>
-      <button ion-fab class="button-theme">
-        <ion-icon name="thumbs-up"></ion-icon>
+        <ion-icon name="share-alt"></ion-icon>
       </button>
       <button ion-fab class="button-theme">
         <ion-icon name="calendar"></ion-icon>
+      </button>
+      <button ion-fab class="button-theme">
+        <ion-icon name="chatbubbles"></ion-icon>
       </button>
     </ion-fab-list>
   </ion-fab>
@@ -68,6 +65,16 @@
     <ion-row>
       <ion-col>
         {{event.description}}
+      </ion-col>
+    </ion-row>
+    <ion-row margin-top>
+      <ion-col>
+        <button ion-button clear color="secondary" style="padding: 0 15px 0 0">
+          <ion-icon name="checkmark"></ion-icon> &nbsp; Aceitar
+        </button>
+        <button ion-button clear color="danger" style="padding: 0 15px 0 0">
+          <ion-icon name="close"></ion-icon> &nbsp; Recusar
+        </button>
       </ion-col>
     </ion-row>
   </ion-grid>
